@@ -2,33 +2,35 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Zhize Li</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>Zhize Li</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export p { white-space: pre-wrap; }
-@media screen and (max-width: 500px) {
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
-#write li > figure:first-child { margin-top: -20px; }
+#write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
@@ -41,7 +43,7 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
@@ -49,8 +51,9 @@ figure > table { margin: 0px !important; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 80px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -60,7 +63,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
 .md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -69,7 +72,7 @@ div.hr:focus { cursor: none; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -78,29 +81,28 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
-  #write { margin-top: 0px; border-color: transparent !important; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid-page; }
   .typora-export #write::after { height: 0px; }
-  @page { margin: 20mm 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > img:only-child { display: block; margin: auto; }
-p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -113,7 +115,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; text-align: cente
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em) { 
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -124,110 +126,380 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
 .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
 .MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
 .MathJax_SVG * { transition: none; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
+table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 
 
-:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
-@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
-@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
-html { font-size: 16px; }
-body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
-#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
-#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
-a { color: rgb(65, 131, 196); }
-h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
-h1 tt, h1 code { font-size: inherit; }
-h2 tt, h2 code { font-size: inherit; }
-h3 tt, h3 code { font-size: inherit; }
-h4 tt, h4 code { font-size: inherit; }
-h5 tt, h5 code { font-size: inherit; }
-h6 tt, h6 code { font-size: inherit; }
-h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
-h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
-h3 { font-size: 1.5em; line-height: 1.43; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1em; }
-h6 { font-size: 1em; color: rgb(119, 119, 119); }
-p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
-li > ol, li > ul { margin: 0px; }
-hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
-li p.first { display: inline-block; }
-ul, ol { padding-left: 30px; }
-ul:first-child, ol:first-child { margin-top: 0px; }
-ul:last-child, ol:last-child { margin-bottom: 0px; }
-blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
-blockquote blockquote { padding-right: 0px; }
-table { padding: 0px; word-break: initial; }
-table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
-table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
-table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
-table tr th:first-child, table tr td:first-child { margin-top: 0px; }
-table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
-.CodeMirror-lines { padding-left: 4px; }
-.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
-.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
-code { background-color: rgb(243, 244, 244); padding: 0px 4px 2px; }
-.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
-.md-task-list-item > input { margin-left: -1.3em; }
-@media print {
-  html { font-size: 13px; }
-  table, pre { break-inside: avoid; }
-  pre { word-wrap: break-word; }
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
 }
-.md-fences { background-color: rgb(248, 248, 248); }
-#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
-.mathjax-block > .code-tooltip { bottom: 0.375rem; }
-.md-mathjax-midline { background: rgb(250, 250, 250); }
-#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
-#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
-.md-tag { color: rgb(167, 167, 167); opacity: 1; }
-.md-toc { margin-top: 20px; padding-bottom: 20px; }
-.sidebar-tabs { border-bottom: none; }
-#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
-#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
-.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
-header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
-.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
-.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
-.md-lang { color: rgb(180, 101, 77); }
-.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
-#md-notification .btn { border: 0px; }
-.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
 
 
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
 
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
 
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
 
- .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>Zhize Li (李志泽)                                 <img src="./files/logo.png" align='right' style='width:150px'/></h1><p>I am a fifth-year Ph.D. student at the <a href='http://iiis.tsinghua.edu.cn/en/'>Institute for Interdisciplinary Information Sciences (IIIS)</a>, Tsinghua University. [<a href='./files/ZhizeLi_CV.pdf'>My CV</a>]. [<a href='https://scholar.google.com/citations?user=uAFPPigAAAAJ&hl=en&oi=ao'>Google Scholar</a>]. My Advisor is <a href='http://iiis.tsinghua.edu.cn/~jianli/'>Prof. Jian Li</a>. I will graduate in July 2019.</p><p>I was a visiting scholar at Computer Science Department of Duke University (Hosted by <a href='https://users.cs.duke.edu/~rongge/'>Prof. Rong Ge</a>)  and a visiting scholar at Industrial and Systems Engineering (ISyE) of Georgia Institute of Technology (Hosted by <a href='https://www.isye.gatech.edu/users/george-lan'>Prof. Guanghui (George) Lan</a>).</p><p>My research interests lie in theoretical computer science and machine learning, in particular (non-)convex optimization algorithms, machine learning, algorithms and data structures.</p><p>PhD thesis: <strong>Simple and Fast Optimization Methods for Machine Learning</strong>. June 2019. <br><font color=#FF0000><strong>2019 Tsinghua Outstanding Doctoral Dissertation Award.</strong></font></p><hr /><h3><a name='header-n7' class='md-header-anchor '></a>Publications (by date) [<a href='./bytopic.html'>by topic</a>]</h3><ol start='' ><li><p><strong><a href='http://arxiv.org/abs/1905.12412'>A Unified Variance-Reduced Accelerated Gradient Method for Convex Optimization</a></strong></p><p>Guanghui Lan, Zhize Li, Yi Zhou (<strong>alphabetical order</strong>).  Submitted.</p></li><li><p><strong><a href='http://arxiv.org/abs/1904.09265'>SSRGD: Simple Stochastic Recursive Gradient Descent for Escaping Saddle Points</a></strong></p><p><strong>Zhize Li</strong>.  Submitted.</p></li><li><p><strong><a href='http://arxiv.org/abs/1809.02341'>A Fast Anderson-Chebyshev Mixing Method for Nonlinear Optimization</a></strong></p><p><strong>Zhize Li</strong>, Jian Li.  Manuscript.</p></li><li><p><strong><a href='http://arxiv.org/abs/1803.11159'>Stochastic Gradient Hamiltonian Monte Carlo with Variance Reduction for Bayesian Inference</a></strong></p><p><strong>Zhize Li</strong>, Tianyi Zhang, Shuyu Cheng, Jun Zhu, Jian Li</p><p>(<tt><font color=#FF4500>Machine Learning</font></tt>), journal, accepted for publication</p></li><li><p><strong><a href='http://arxiv.org/abs/1802.05640'>Gradient Boosting With Piece-Wise Linear Regression Trees</a></strong></p><p>Yu Shi, Jian Li, <strong>Zhize Li</strong>.  </p><p>28th International Joint Conference on Artificial Intelligence (<tt><font color=#FF4500>IJCAI 2019</font></tt>)</p></li><li><p><strong><a href='http://arxiv.org/abs/1905.00529'>Stabilized SVRG: Simple Variance Reduction for Nonconvex Optimization</a></strong></p><p>Rong Ge, Zhize Li, Weiyao Wang, Xiang Wang (<strong>alphabetical order</strong>).</p><p>32nd Annual Conference on Learning Theory (<tt><font color=#FF4500>COLT 2019</font></tt>)</p></li><li><p><strong><a href='http://arxiv.org/abs/1810.06793'>Learning Two-layer Neural Networks with Symmetric Inputs</a></strong></p><p>Rong Ge, Rohith Kuditipudi, Zhize Li, Xiang Wang (<strong>alphabetical order</strong>)</p><p>7th International Conference on Learning Representations (<tt><font color=#FF4500>ICLR 2019</font></tt>)</p></li><li><p><strong><a href='http://arxiv.org/abs/1802.04477'>A Simple Proximal Stochastic Gradient Method for Nonsmooth Nonconvex Optimization</a></strong></p><p><strong>Zhize Li</strong>, Jian Li</p><p>32nd Conference on Neural Information Processing Systems (<tt><font color=#FF4500>NeurIPS 2018</font></tt>). (<strong>spotlight</strong>)</p></li><li><p><strong><a href='http://arxiv.org/abs/1610.08305'>Optimal In-Place Suffix Sorting</a></strong></p><p><strong>Zhize Li</strong>, Jian Li, Hongwei Huo</p><p>25th International Symposium on String Processing and Information Retrieval (<tt><font color=#FF4500>SPIRE 2018</font></tt>). (<strong>invited</strong>) [<a href='https://link.springer.com/chapter/10.1007%2F978-3-030-00479-8_22'>long paper</a>]&ensp;[<a href='./files/Optimal_inplace_suffix_sorting_Zhize_Li.pdf'>slides</a>]&ensp;[<a href='http://arxiv.org/abs/1610.08305'>full version in arXiv</a>] submitted to journal.</p><p>Previous one-page [<a href='https://ieeexplore.ieee.org/document/8416639'>summary paper</a>] appeared in 28th IEEE Data Compression Conference (<tt><font color=#FF4500>DCC 2018</font></tt>)</p><p>We give the <strong>first</strong> in-place <a href='https://en.wikipedia.org/wiki/Suffix_array'>suffix array</a> (a fundamental data structure in string processing and data compression, as a space-efficient alternative to suffix tree) construction algorithm which is <strong>optimal both in time and space</strong>. In particular, our algorithm solves the important open problem posed by Franceschini and Muthukrishnan in ICALP 2007. Unfortunately, our paper has been prevented from being published since 2017 due to a malicious conflict of interest <strong>[<a href='https://suffixsorting.github.io/'><font color='red'>a disclaimer</font></a>]</strong>.</p></li><li><p><strong><a href='http://arxiv.org/abs/1810.04517'>A Fast Polynomial-time Primal-Dual Projection Algorithm for Linear Programming</a></strong></p><p><strong>Zhize Li</strong>, Wei Zhang, Kees Roos</p><p>23rd International Symposium on Mathematical Programming (<tt><font color=#FF4500>ISMP 2018</font></tt>) [<a href='http://arxiv.org/abs/1810.04517'>full version</a>] in submission</p></li><li><p><strong><a href='https://link.springer.com/chapter/10.1007%2F978-3-319-99660-8_16'>Optimal Two-Stage Mechanism for Ordinal Peer Assessment</a></strong></p><p><strong>Zhize Li</strong>, Le Zhang, Zhixuan Fang, Jian Li</p><p>11th International Symposium on Algorithmic Game Theory (<tt><font color=#FF4500>SAGT 2018</font></tt>) </p></li><li><p><strong><a href='./files/Topk_Selection_in_MAB.pdf'>On Top-k Selection in Multi-Armed Bandits and Hidden Bipartite Graphs</a></strong></p><p>Wei Cao, Jian Li, Yufei Tao, <strong>Zhize Li</strong></p><p>28th Conference on Neural Information Processing Systems (<tt><font color=#FF4500>NIPS 2015</font></tt>)</p></li></ol><hr /><h3><a name='header-n57' class='md-header-anchor '></a>Experience/Services</h3><ul><li><p>Conference reviewer: NeurIPS 2019, ECML 2019, COLT 2019, ICML 2019, STOC 2019, COLT 2018, ICML 2017, AAAI 2017, ICALP 2016.</p></li><li><p>Journal reviewer:  Journal of Machine Learning Research (JMLR), IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), IEEE Transactions on Parallel and Distributed Systems (TPDS), IEEE/ACM Transactions on Networking (ToN).</p></li><li><p>Research Assistant (RA):</p><p>&ensp;&ensp;<strong><a href='http://www.ctcs.cuhk.edu.hk/About_CTCS.html'>Tsinghua-MIT-CUHK Research Center</a></strong> for Theoretical Computer Science (Sep, 2014 - Jun, 2019)</p></li><li><p>Teaching Assistant (TA): </p><ol start='' ><li><strong>Advanced Theoretical Computer Science</strong> for graduate students (2017 Spring)</li><li><strong>Algorithm Design</strong> for undergraduate students (<a href='http://iiis.tsinghua.edu.cn/en/yaoclass/'>Yao Class</a>) (2015 Fall)</li></ol></li><li><p>The 2016 National Combinatorial Optimization Summer School  </p><p>&ensp;&ensp;Courses: Computational Complexity, Approximation Algorithms, Randomized Algorithms</p><p>&ensp;&ensp;<strong>Outstanding Student</strong> (top 10/110)</p></li><li><p>Algorithm Engineer Intern: <a href='https://en.wikipedia.org/wiki/Alibaba_Group'>Alibaba</a> (Jul - Aug, 2013), <a href='https://en.wikipedia.org/wiki/NetEase'>NetEase</a> (Jun - Aug, 2017) </p></li></ul><hr /><h3><a name='header-n80' class='md-header-anchor '></a>Invited Talks/Posters</h3><ol start='' ><li><a href='http://conference.iiis.tsinghua.edu.cn/CTW2018/'>China Theory Week 2018</a> (founded by <a href='http://iiis.tsinghua.edu.cn/yao/'>Prof. Andrew Chi-Chih Yao</a> in 2007) [slides]</li><li>The 16th <a href='http://lamda.nju.edu.cn/conf/mla/'>China Symposium on Machine Learning and Applications</a> (MLA&#39;18) [slides]&ensp;[poster]</li></ol><hr /><h3><a name='header-n87' class='md-header-anchor '></a>Conference Talks/Posters</h3><p>NeurIPS 2018, SPIRE 2018, SAGT 2018, ISMP 2018, DCC 2018, NIPS 2015.</p><hr /><h3><a name='header-n90' class='md-header-anchor '></a>Selected Awards</h3><ul><li>National Scholarship (top 1%)</li><li>Pacesetter of Outstanding Graduates (highest)</li><li>The First Prize in Collegiate Advanced Mathematics Contest (highest) </li></ul><hr /><h4><a name='header-n99' class='md-header-anchor '></a>Contact <a href="https://clustrmaps.com/site/1ah3l" style="float:right" title="Visit tracker"><img src="http://clustrmaps.com/map_v2.png?d=5CxjvvcvNxfrqkGpYFzZH4ihsWzboD-b6CbjZNjHM5U&cl=ffffff" /></a></h4><p>Zhize Li</p><p>Email: zhizeli DOT thu AT gmail DOT com</p><p><del>zz-li14 AT mails DOT tsinghua DOT edu DOT cn</del></p><p>Address: Room 4-609, FIT Building, Tsinghua University, Beijing 100084, China</p></div>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><h1><a name="zhize-li-李志泽enspenspenspenspenspensp---------------img-srcfileskaustlogo2png-stylewidth230pxensp--img-srcfileslogopng--stylewidth140px" class="md-header-anchor"></a><span>Zhize Li (李志泽)</span>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span>               </span><img src="./files/kaust_logo2.png" style='width:230px'/>&ensp;<span>  </span><img src="./files/logo.png"  style='width:140px'/><span> </span></h1><p><span>I am now a postdoc at </span><a href='https://kaust.edu.sa/en'><span>King Abdullah University of Science and Technology (KAUST)</span></a><span> advised by </span><a href='https://richtarik.org'><span>Prof. Peter Richtárik</span></a><span>.</span></p><p><span>I received my Ph.D. degree in July 2019 from the </span><a href='http://iiis.tsinghua.edu.cn/en/'><span>Institute for Interdisciplinary Information Sciences (IIIS)</span></a><span>, Tsinghua University. My Advisor was </span><a href='http://iiis.tsinghua.edu.cn/~jianli/'><span>Prof. Jian Li</span></a><span>. </span></p><p><span>I was a visiting scholar at Computer Science Department of Duke University (Hosted by </span><a href='https://users.cs.duke.edu/~rongge/'><span>Prof. Rong Ge</span></a><span>)  and a visiting scholar at Industrial and Systems Engineering (ISyE) of Georgia Institute of Technology (Hosted by </span><a href='https://www.isye.gatech.edu/users/george-lan'><span>Prof. Guanghui (George) Lan</span></a><span>).</span></p><p><span>My research interests lie in theoretical computer science and machine learning, in particular (non-)convex optimization algorithms, machine learning, algorithms and data structures.</span></p><p><span>PhD thesis: </span><strong><span>Simple and Fast Optimization Methods for Machine Learning</span></strong><span>. June 2019. </span><br><font color=#FF0000><strong><span>2019 Tsinghua Outstanding Doctoral Dissertation Award.</span></strong></font></p><hr /><h3><a name="publications-by-date-by-topicbytopichtml-google-scholarhttpsscholargooglecomcitationsuseruafppigaaaajhlenoiao" class="md-header-anchor"></a><span>Publications (by date) [</span><a href='./bytopic.html'><span>by topic</span></a><span>] [</span><a href='https://scholar.google.com/citations?user=uAFPPigAAAAJ&amp;hl=en&amp;oi=ao'><span>google scholar</span></a><span>]</span></h3><ol start='' ><li><p><strong><a href='http://arxiv.org/abs/1905.12412'><span>A Unified Variance-Reduced Accelerated Gradient Method for Convex Optimization</span></a></strong></p><p><span>Guanghui Lan, Zhize Li, Yi Zhou (</span><strong><span>alphabetical order</span></strong><span>)</span></p><p><span>33rd Conference on Neural Information Processing Systems (</span><tt><font color=#FF4500><span>NeurIPS 2019</span></font></tt><span>)</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1904.09265'><span>SSRGD: Simple Stochastic Recursive Gradient Descent for Escaping Saddle Points</span></a></strong></p><p><strong><span>Zhize Li</span></strong></p><p><span>33rd Conference on Neural Information Processing Systems (</span><tt><font color=#FF4500><span>NeurIPS 2019</span></font></tt><span>)</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1809.02341'><span>A Fast Anderson-Chebyshev Mixing Method for Nonlinear Optimization</span></a></strong></p><p><strong><span>Zhize Li</span></strong><span>, Jian Li.  Manuscript.</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1803.11159'><span>Stochastic Gradient Hamiltonian Monte Carlo with Variance Reduction for Bayesian Inference</span></a></strong></p><p><strong><span>Zhize Li</span></strong><span>, Tianyi Zhang, Shuyu Cheng, Jun Zhu, Jian Li</span></p><p><span>(</span><tt><font color=#FF4500><span>Machine Learning</span></font></tt><span>), 2019, journal.</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1802.05640'><span>Gradient Boosting With Piece-Wise Linear Regression Trees</span></a></strong></p><p><span>Yu Shi, Jian Li, </span><strong><span>Zhize Li</span></strong></p><p><span>28th International Joint Conference on Artificial Intelligence (</span><tt><font color=#FF4500><span>IJCAI 2019</span></font></tt><span>)</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1905.00529'><span>Stabilized SVRG: Simple Variance Reduction for Nonconvex Optimization</span></a></strong></p><p><span>Rong Ge, Zhize Li, Weiyao Wang, Xiang Wang (</span><strong><span>alphabetical order</span></strong><span>)</span></p><p><span>32nd Annual Conference on Learning Theory (</span><tt><font color=#FF4500><span>COLT 2019</span></font></tt><span>)</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1810.06793'><span>Learning Two-layer Neural Networks with Symmetric Inputs</span></a></strong></p><p><span>Rong Ge, Rohith Kuditipudi, Zhize Li, Xiang Wang (</span><strong><span>alphabetical order</span></strong><span>)</span></p><p><span>7th International Conference on Learning Representations (</span><tt><font color=#FF4500><span>ICLR 2019</span></font></tt><span>)</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1802.04477'><span>A Simple Proximal Stochastic Gradient Method for Nonsmooth Nonconvex Optimization</span></a></strong></p><p><strong><span>Zhize Li</span></strong><span>, Jian Li</span></p><p><span>32nd Conference on Neural Information Processing Systems (</span><tt><font color=#FF4500><span>NeurIPS 2018</span></font></tt><span>). (</span><strong><span>spotlight</span></strong><span>)</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1610.08305'><span>Optimal In-Place Suffix Sorting</span></a></strong></p><p><strong><span>Zhize Li</span></strong><span>, Jian Li, Hongwei Huo</span></p><p><span>25th International Symposium on String Processing and Information Retrieval (</span><tt><font color=#FF4500><span>SPIRE 2018</span></font></tt><span>). (</span><strong><span>invited</span></strong><span>) [</span><a href='https://link.springer.com/chapter/10.1007%2F978-3-030-00479-8_22'><span>long paper</span></a><span>]</span>&ensp;<span>[</span><a href='./files/Optimal_inplace_suffix_sorting_Zhize_Li.pdf'><span>slides</span></a><span>]</span>&ensp;<span>[</span><a href='http://arxiv.org/abs/1610.08305'><span>full version in arXiv</span></a><span>] submitted to journal.</span></p><p><span>Previous one-page [</span><a href='https://ieeexplore.ieee.org/document/8416639'><span>summary paper</span></a><span>] appeared in 28th IEEE Data Compression Conference (</span><tt><font color=#FF4500><span>DCC 2018</span></font></tt><span>)</span></p><p><span>We give the </span><strong><span>first</span></strong><span> in-place </span><a href='https://en.wikipedia.org/wiki/Suffix_array'><span>suffix array</span></a><span> (a fundamental data structure in string processing and data compression, as a space-efficient alternative to suffix tree) construction algorithm which is </span><strong><span>optimal both in time and space</span></strong><span>. In particular, our algorithm solves the important open problem posed by Franceschini and Muthukrishnan in ICALP 2007. Unfortunately, our paper has been prevented from being published since 2017 due to a malicious conflict of interest </span><strong><span>[</span><a href='https://suffixsorting.github.io/'><font color='red'><span>a disclaimer</span></font></a><span>]</span></strong><span>.</span></p></li><li><p><strong><a href='http://arxiv.org/abs/1810.04517'><span>A Fast Polynomial-time Primal-Dual Projection Algorithm for Linear Programming</span></a></strong></p><p><strong><span>Zhize Li</span></strong><span>, Wei Zhang, Kees Roos</span></p><p><span>23rd International Symposium on Mathematical Programming (</span><tt><font color=#FF4500><span>ISMP 2018</span></font></tt><span>) [</span><a href='http://arxiv.org/abs/1810.04517'><span>full version</span></a><span>] in submission</span></p></li><li><p><strong><a href='https://link.springer.com/chapter/10.1007%2F978-3-319-99660-8_16'><span>Optimal Two-Stage Mechanism for Ordinal Peer Assessment</span></a></strong></p><p><strong><span>Zhize Li</span></strong><span>, Le Zhang, Zhixuan Fang, Jian Li</span></p><p><span>11th International Symposium on Algorithmic Game Theory (</span><tt><font color=#FF4500><span>SAGT 2018</span></font></tt><span>) </span></p></li><li><p><strong><a href='./files/Topk_Selection_in_MAB.pdf'><span>On Top-k Selection in Multi-Armed Bandits and Hidden Bipartite Graphs</span></a></strong></p><p><span>Wei Cao, Jian Li, Yufei Tao, </span><strong><span>Zhize Li</span></strong></p><p><span>28th Conference on Neural Information Processing Systems (</span><tt><font color=#FF4500><span>NIPS/NeurIPS 2015</span></font></tt><span>)</span></p></li></ol><hr /><h3><a name="experienceservices" class="md-header-anchor"></a><span>Experience/Services</span></h3><ul><li><p><span>Conference reviewer: AAAI 2020 (PC), NeurIPS 2019, ECML 2019, COLT 2019, ICML 2019, STOC 2019, COLT 2018, ICML 2017, AAAI 2017, ICALP 2016.</span></p></li><li><p><span>Journal reviewer: Computational Optimization and Applications (COAP), Journal of Machine Learning Research (JMLR), IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), IEEE Transactions on Parallel and Distributed Systems (TPDS), IEEE/ACM Transactions on Networking (ToN).</span></p></li><li><p><span>Research Assistant (RA):</span></p><p>&ensp;&ensp;<strong><a href='http://www.ctcs.cuhk.edu.hk/About_CTCS.html'><span>Tsinghua-MIT-CUHK Research Center</span></a></strong><span> for Theoretical Computer Science (Sep, 2014 - Jun, 2019)</span></p></li><li><p><span>Teaching Assistant (TA): </span></p><ol start='' ><li><strong><span>Advanced Theoretical Computer Science</span></strong><span> for graduate students (2017 Spring)</span></li><li><strong><span>Algorithm Design</span></strong><span> for undergraduate students (</span><a href='http://iiis.tsinghua.edu.cn/en/yaoclass/'><span>Yao Class</span></a><span>) (2015 Fall)</span></li></ol></li><li><p><span>The 2016 National Combinatorial Optimization Summer School  </span></p><p>&ensp;&ensp;<span>Courses: Computational Complexity, Approximation Algorithms, Randomized Algorithms</span></p><p>&ensp;&ensp;<strong><span>Outstanding Student</span></strong><span> (top 10/110)</span></p></li><li><p><span>Algorithm Engineer Intern: </span><a href='https://en.wikipedia.org/wiki/Alibaba_Group'><span>Alibaba</span></a><span> (Jul - Aug, 2013), </span><a href='https://en.wikipedia.org/wiki/NetEase'><span>NetEase</span></a><span> (Jun - Aug, 2017) </span></p></li></ul><hr /><h3><a name="invited-talksposters" class="md-header-anchor"></a><span>Invited Talks/Posters</span></h3><ol start='' ><li><a href='http://conference.iiis.tsinghua.edu.cn/CTW2018/'><span>China Theory Week 2018</span></a><span> (founded by </span><a href='http://iiis.tsinghua.edu.cn/yao/'><span>Prof. Andrew Chi-Chih Yao</span></a><span> in 2007) [slides]</span></li><li><span>The 16th </span><a href='http://lamda.nju.edu.cn/conf/mla/'><span>China Symposium on Machine Learning and Applications</span></a><span> (MLA&#39;18) [slides]</span>&ensp;<span>[poster]</span></li></ol><hr /><h3><a name="conference-talksposters" class="md-header-anchor"></a><span>Conference Talks/Posters</span></h3><p><span>NeurIPS 2018, SPIRE 2018, SAGT 2018, ISMP 2018, DCC 2018, NIPS 2015.</span></p><hr /><h3><a name="selected-awards" class="md-header-anchor"></a><span>Selected Awards</span></h3><ul><li><span>National Scholarship (top 1%)</span></li><li><span>Pacesetter of Outstanding Graduates (highest)</span></li><li><span>The First Prize in Collegiate Advanced Mathematics Contest (highest) </span></li></ul><hr /><h4><a name="contact-a-hrefhttpsclustrmapscomsite1ah3l-stylefloatright-titlevisit-trackerimg-srchttpclustrmapscommapv2pngd5cxjvvcvnxfrqkgpyfzzh4ihswzbod-b6cbjznjhm5uclffffff-a" class="md-header-anchor"></a><span>Contact </span><a href="https://clustrmaps.com/site/1ah3l" style="float:right" title="Visit tracker"><img src="http://clustrmaps.com/map_v2.png?d=5CxjvvcvNxfrqkGpYFzZH4ihsWzboD-b6CbjZNjHM5U&cl=ffffff" /></a></h4><p><span>Zhize Li</span></p><p><span>Email: zhizeli DOT thu AT gmail DOT com</span></p><p><del><span>zz-li14 AT mails DOT tsinghua DOT edu DOT cn</span></del></p><p><del><span>Address: Room 4-609, FIT Building, Tsinghua University, Beijing 100084, China</span></del></p></div>
 </body>
 </html>
